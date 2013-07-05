@@ -18,9 +18,9 @@ servers = [
 ]
 
 routers = {
-    "get_all_books": "books",
+    "get_all_books": "books/",
     "get_book_detail": "book/detail/",
-    "get_chapters": "chapters",
+    "get_chapters": "chapters/",
     "get_chapter_content": "chapter/detail/",
 }
 

@@ -13,7 +13,7 @@ def get_path(host, port, source, path):
     real_path = routers.get(path, path)
     return path_lambda(host, port, source, real_path)
 
-def requests(url, method="get", **kwargs):
+def requests(url, method="post", **kwargs):
     handler = getattr(py_requests, method, py_requests.get)
-    content = handler(url=url, headers=http_headers ,**kwargs).content
+    content = handler(url=url, headers=http_headers , **kwargs).json()
     return content
